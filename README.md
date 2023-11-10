@@ -4,7 +4,7 @@
 
 ## Services description.
 
-This task aims to create two services that will perform math operations in a distributed way. Services should support such binary operations:
+This task aims to create two services that will perform math operations in a distributed way. Services should support the following operations:
 - addition
 - subtraction
 - multiplication
@@ -20,11 +20,16 @@ Consuming messages from the `calculation-queue`, performs calculation and stores
 ## Requirements
 - Use provided docker-compose as a starting point.
 - Amazon SQS should be used as a message bus.
-- MySQL should be used as DB. 
+- Any relational database can be used as a result cache. 
 - Each service must be a separate unit with the possibility of running in its own Docker container, as all of them should start through docker-compose.
+- Source code must be written in Java language with the usage of Spring framework. JDK version must be 11+
+
+## Optional 
+- OpenAPI/Swagger documentation of the REST service
+- REST authentication
 
 
-Please choose frameworks, databases, and ORM at its discretion. 
+Please choose frameworks, databases, and ORM at its discretion. SQS can be either used from AWS free tier or deployed locally through AWS localstack
 
 ## Useful links:
 
